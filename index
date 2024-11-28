@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #t td{
+            width: 50px;
+        }
+        body{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div>Enter no of Rows:<input type="number" id="i1"></div><br><br>
+        <div>Enter no of Cols:<input type="number" id="i2"></div><br><br>
+        <div><input type="button" value="Create the table" onclick="tab()"></div><br><br><br><br>
+        <table id="t" border="1" style="background-color:aqua ;text-align: center;" cellpadding="10px" cellspacing="0px">
+
+        </table>
+    </center>
+    <script>
+        function tab(){
+            var row=document.getElementById("i1").value;
+            var col=document.getElementById("i2").value;
+            var t=document.getElementById("t")
+            t.innerHTML=""
+            var c=0
+            for(var i=1;i<=row;i++){
+                var r1=document.createElement("tr")
+                for(var j=1;j<=col;j++){
+                    var c1=document.createElement("td")
+                    c1.textContent=(c+=1).toString()
+                    r1.appendChild(c1)
+                }
+                t.appendChild(r1)
+            }
+            r1.classList.add('d')
+        }
+    </script>
+</body>
+</html>
